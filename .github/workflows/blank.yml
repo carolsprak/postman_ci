@@ -10,10 +10,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-env:
-  # Setting an environment variable with the value of a configuration variable
-  env_var: ${{ vars.API_KEY }}
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -25,6 +21,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+
+      - name: Configurar variáveis de ambiente
+        env:
+          API_KEY: ${{ API_KEY }}
         
       - name: Install postman
         run: curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
