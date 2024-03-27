@@ -11,7 +11,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    env:
+      API_KEY: ${{ env.API_KEY }} 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -24,5 +25,3 @@ jobs:
         run: |
           echo "repository variable : $API_KEY"
           npm run build
-        env:
-          API_KEY: ${{ vars.API_KEY }}
