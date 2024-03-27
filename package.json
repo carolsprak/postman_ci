@@ -4,12 +4,8 @@
   "description": "Postman CI Testing",
   "main": "index.js",
   "scripts": {
-    "test": "./postman.sh",
-    "start": "node server.js"
+    "test": "./postman.sh"
   },
   "author": "Anne Rocha",
-  "license": "ISC",
-  "dependencies": {
-     "json-server": "^0.17.0"
-  }
+  "license": "ISC"   
 }
