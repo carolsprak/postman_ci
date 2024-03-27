@@ -20,8 +20,10 @@ jobs:
       - name: Install postman
         run: curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
     
-      - name: Run a postman script
+      - name: Run a postman script        
+        run: |
+          echo "repository variable : $API_KEY"
+          npm run build
+          
         env:
           API_KEY: ${{ vars.API_KEY }}
-        run: |
-          npm run build
