@@ -20,12 +20,6 @@ jobs:
       - name: Install postman
         run: curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
 
-      - name: Install server
-        run: npm install
-
-      - name: Iniciar servidor  
-        run: npm run start
-    
       - name: Run a postman script     
         env:
           API_KEY: ${{ secrets.API_KEY }} 
