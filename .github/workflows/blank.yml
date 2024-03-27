@@ -25,4 +25,3 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }} 
         run: |
           echo "repository variable : $API_KEY"
-          npm run build
