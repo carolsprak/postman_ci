@@ -23,8 +23,8 @@ jobs:
       - name: Install server
         run: npm install
 
-      - name: Install server
-        run: npm start
+      - name: Iniciar servidor  
+        run: npm run start
     
       - name: Run a postman script     
         env:
