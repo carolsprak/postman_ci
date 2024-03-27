@@ -11,8 +11,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      API_KEY: ${{ secrets.API_KEY }} 
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -21,7 +20,9 @@ jobs:
       - name: Install postman
         run: curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
     
-      - name: Run a postman script        
+      - name: Run a postman script     
+        env:
+          API_KEY: ${{ secrets.API_KEY }} 
         run: |
           echo "repository variable : $API_KEY"
           npm run build
