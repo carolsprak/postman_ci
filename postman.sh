@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source .env
 
 postman login --with-api-key $API_KEY
