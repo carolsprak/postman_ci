@@ -4,7 +4,7 @@
   "description": "Postman CI Testing",
   "main": "index.js",
   "scripts": {
-    "build": "./postman.sh",
+    "test": "./postman.sh",
     "start": "node server.js"
   },
   "author": "Anne Rocha",
