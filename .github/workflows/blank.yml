@@ -24,6 +24,5 @@ jobs:
         run: |
           echo "repository variable : $API_KEY"
           npm run build
-          
         env:
           API_KEY: ${{ vars.API_KEY }}
