@@ -5,7 +5,6 @@
   
 `npm run test`
 
-- Este projeto está protegido com uma chave secreta, por isso não irá funcionar na máquina de outras pessoas. 
-
+- Este projeto está protegido com uma chave secreta, por isso não irá funcionar na máquina de outras pessoas.
 
  
